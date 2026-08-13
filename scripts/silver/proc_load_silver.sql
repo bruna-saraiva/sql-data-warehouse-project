@@ -1,4 +1,6 @@
-EXEC silver.load_silver;
+
+USE DataWarehouse;
+GO
 
 CREATE OR ALTER PROCEDURE silver.load_silver AS
 BEGIN
@@ -200,4 +202,10 @@ BEGIN
 		PRINT 'ERROR MESSAGE:' + ERROR_MESSAGE();
 		PRINT '=========================================================================';
 	END CATCH
-END
+END;
+
+GO
+
+EXEC silver.load_silver;
+GO
+
